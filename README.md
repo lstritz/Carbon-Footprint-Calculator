@@ -1,4 +1,4 @@
-# Python-Project-S-S
+# Carbon-Footprint-Calculator
 This simple carbon footprint calulator is an estimate of the users carbon footprint in a year based on their traveling frequency and destination. The user can only select one option.
 Lea Stritzke (5785189)
 
