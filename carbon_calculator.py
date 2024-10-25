@@ -20,7 +20,7 @@ def carbon_car(car_co2, travel_days, distance):
 
 def carbon_train(train_co2, travel_days, distance):
     """Calculates the Carbon footprint for a train user
-
+    
     Args:
         train_co2 (int): Average train co2 from Our World in Data
         travel_days (str): User input, average amount of travel days per year
@@ -112,3 +112,70 @@ World_distance = 6000
 
 carbon_final = carbon(main_transport, travel_days, distance)
 print('Your average carbon footprint', carbon_final, 'kg of CO2 per year')
+
+
+# test functions
+
+def test_carbon_car():
+    day = 2
+    distance = 'World'
+    assert carbon_car(car_co2,day,distance) == 2 * car_co2 * World_distance
+    
+    day = -1
+    distance = 'Europe'
+    assert carbon_car(car_co2,day, distance) != 'Your chosen amount of travel days per year is invalid. Please try again'
+    
+    day = 400
+    distance = 'Domestic'
+    assert carbon_car(car_co2, day, distance) != 'Your chosen amount of travel days per year is invalid. Please try again'
+    
+    day = 4
+    distance = 'Domestic'
+    assert carbon_car(car_co2, day, distance) == 4 * car_co2 * Domestic_distance
+    
+    day = 7
+    distance = 'Europe'
+    assert carbon_car(car_co2, day, distance) == 7 * car_co2 * Europe_distance
+    
+def test_carbon_train():
+    day = 80
+    distance = 'World'
+    assert carbon_train(train_co2, day, distance) == 80 * train_co2 * World_distance
+    
+    day = -6
+    distance = 'Europe'
+    assert carbon_train(train_co2, day, distance) != 'Your chosen amount of travel days per year is invalid. Please try again'
+    
+    day = 399
+    distance = 'Domestic'
+    assert carbon_train(train_co2, day, distance) != 'Your chosen amount of travel days per year is invalid. Please try again'
+    
+    day = 10
+    distance = 'Domestic'
+    assert carbon_train(train_co2, day, distance) == 10 * train_co2 * Domestic_distance
+    
+    day = 23
+    distance = 'Europe'
+    assert carbon_train(train_co2, day, distance) == 23 * train_co2 * Europe_distance
+    
+def test_carbon_plane():
+    day = 100
+    distance = 'World'
+    assert carbon_plane(plane_co2, day, distance) == 100 * plane_co2 * World_distance
+    
+    day = -70
+    distance = 'Europe'
+    assert carbon_plane(plane_co2, day, distance) != 'Your chosen amount of travel days per year is invalid. Please try again'
+    
+    day = 367
+    distance = 'Domestic'
+    assert carbon_plane(plane_co2, day, distance) != 'Your chosen amount of travel days per year is invalid. Please try again'
+    
+    day = 15
+    distance = 'Domestic'
+    assert carbon_plane(plane_co2, day, distance) == 15 * plane_co2 * Domestic_distance
+    
+    day = 26
+    distance = 'Europe'
+    assert carbon_plane(plane_co2, day, distance) == 26 * plane_co2 * Europe_distance
+    
