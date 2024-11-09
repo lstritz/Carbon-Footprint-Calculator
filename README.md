@@ -71,3 +71,7 @@ In the picture above we can see that the pytests did run correctly and none of t
 ![alt text](pytests_onefailed.jpg)
 
 Here we see an example of a failed pytest for function carbon. The pytest in the code has not been changed so it's failing because we entered: train, 50, Domestic. It was sure from the begnning that the test will fail.
+
+# failure at packaging
+After installing wheels and build and then running <python -m build> my package seemed to be working. Although it was working the name was UNKNOWN, which is not the name of my file. I believe the issue might be because of wrong versions of wheel or build on my machine. Even though i tried to uninstall and install again the name was still UNKNOWN. A different user downloaded the newest version of my package from GitHub and for them the package carbon_calculator seemed to work and they were able to use pip install for it. 
+Isssue to be resolved.
