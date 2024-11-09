@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Carbon-Footprint-Calculator"
+version = "0.1.0"
+description = "A simple package that Calculates your carbon footprint using variables based on transportation."
+authors = [ 
+    {name = "Lea Stritzke", email = "lstritzke@tudelft.nl"},
+]

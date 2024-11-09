@@ -179,3 +179,8 @@ def test_carbon_plane():
     distance = 'Europe'
     assert carbon_plane(plane_co2, day, distance) == 26 * plane_co2 * Europe_distance
     
+def test_carbon(): 
+    transport = 'plane'
+    days = 2
+    distance = 'World'
+    assert carbon(transport, days, distance) == carbon_final and carbon_final == 2880
