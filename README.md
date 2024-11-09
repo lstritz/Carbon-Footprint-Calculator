@@ -67,3 +67,7 @@ Lea Stritzke (5785189)
 ![alt text](pytests_passed.jpg)
 
 In the picture above we can see that the pytests did run correctly and none of the functions did not fail. What is important to mention is that function carbon is a user input function. What follows with that is that is that the test_carbon will only work if after running the test we will insert verules: plane, 2, World. In any other case that test will fail unless we modify the test function each time.
+
+![alt text](pytests_onefailed.jpg)
+
+Here we see an example of a failed pytest for function carbon. The pytest in the code has not been changed so it's failing because we entered: train, 50, Domestic. It was sure from the begnning that the test will fail.
