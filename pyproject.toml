@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "Carbon-Footprint-Calculator"
 version = "0.1.0"
 description = "A simple package that Calculates your carbon footprint using variables based on transportation."
+readme = "README.md"
 authors = [ 
     {name = "Lea Stritzke", email = "lstritzke@tudelft.nl"},
 ]
